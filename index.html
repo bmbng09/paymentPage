@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>E-Litera</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="/daftar/daftar.html">E-Litera<span>.</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#popular-courses">Popular Courses</a></li>
+        <li><a href="#client">Clients</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn"><a href="/daftar/daftar.html" style="font-weight: bold;" >Subscribe</a></button>
+      </div>
+    </nav>
+
+    <main class="payment-content">
+        <div class="payment-container">
+          <h1>Payment</h1>
+      
+          <!-- Ringkasan Pesanan -->
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Course: <span>Introduction to Python</span></p>
+            <p>Price: <span id="original-price">$50</span></p>
+            <p>Discount: <span id="discount">$0</span></p>
+            <hr>
+            <p>Total: <span id="total-price">$50</span></p>
+          </div>
+      
+          <!-- Pilihan Metode Pembayaran -->
+          <div class="payment-methods">
+            <h2>Select Payment Method</h2>
+            <label>
+              <input type="radio" name="payment-method" value="credit-card" checked> Credit Card
+            </label>
+            <label>
+              <input type="radio" name="payment-method" value="e-wallet"> E-Wallet
+            </label>
+            <label>
+              <input type="radio" name="payment-method" value="bank-transfer"> Bank Transfer
+            </label>
+          </div>
+      
+          <!-- Dropdown untuk E-Wallet -->
+          <div class="e-wallet-options hidden">
+            <h3>Choose E-Wallet</h3>
+            <select id="e-wallet-select">
+              <option value="" disabled selected>Select your e-wallet</option>
+              <option value="ovo">OVO</option>
+              <option value="dana">DANA</option>
+              <option value="gopay">GoPay</option>
+              <option value="shopeepay">ShopeePay</option>
+            </select>
+          </div>
+      
+          <!-- Formulir Pembayaran -->
+          <form class="payment-form">
+            <h2>Payment Details</h2>
+      
+            <label for="cardholder-name">Cardholder Name</label>
+            <input type="text" id="cardholder-name" placeholder="John Doe" required>
+      
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="16" required>
+      
+            <div class="form-row">
+              <div>
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required>
+              </div>
+              <div>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+              </div>
+            </div>
+      
+            <!-- Kode Promo -->
+            <label for="promo-code">Promo Code</label>
+            <input type="text" id="promo-code" placeholder="Enter promo code">
+      
+            <button type="button" class="apply-promo-btn">Apply Promo</button>
+            <button type="submit" class="pay-btn">Pay $50</button>
+          </form>
+        </div>
+      </main>
+      
+
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section company-info">
+            <h2>Edtech</h2>
+            <p><i class="fa fa-phone"></i> +998 7364 5867</p>
+            <p><i class="fa fa-envelope"></i> e-litera.course</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+  
+          <div class="footer-section menu">
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Certificates</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section company">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Sell Courses</a></li>
+              <li><a href="#">Mentor</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section support">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Comments</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer_bar">
+          Copyright © 2025 E-Litera - Online Course.
+        </div>
+      </footer>
+      
+  
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+  </html>
+  
